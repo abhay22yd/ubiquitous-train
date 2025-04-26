@@ -17,7 +17,14 @@ def detect_phishing(text):
         label = "Safe"
 
     # Use the classifier to get a confidence score (using sentiment model as a stand-in)
-    result = classifier(text)[0]
-    confidence = round(result["score"] * 100, 2)
+    result = classifier(text)
+# Get the first label from the result (depends on version)
+    if isinstance(result, list) and isinstance(result[0], list):
+        score = result[0][0]["score"]
+    elif isinstance(result, list):
+        score = result[0]["score"]
+    else:
+        score = 0.0  # fallback
+    confidence = round(score * 100, 2)
 
     return label, confidence
