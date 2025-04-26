@@ -1,0 +1,12 @@
+Subject: Urgent - Your Account Has Been Suspended
+
+Dear user,
+
+We have detected suspicious activity in your bank account. For your protection, we have temporarily suspended your account.
+
+To reactivate, please click the link below and verify your information:
+
+http://secure-login.yourbank-example.com/verify
+
+Thank you,
+Security Team
